@@ -2,7 +2,7 @@
   "name": "consul-telemetry-exporter",
   "version": "0.0.1",
   "private": false,
-  "bin": "app.js",
+  "bin": "bin/www",
   "dependencies": {
     "body-parser": "~1.18.2",
     "cookie-parser": "~1.4.3",
