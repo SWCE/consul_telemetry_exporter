@@ -16,4 +16,5 @@ Any reported metric on the [metrica endpoint](https://www.consul.io/api/agent.ht
     $ consul-telemetry-exporter
     
 will run on port 7569 by default, can be override using the `PORT` env variable
+
 Requires the `HOSTNAME` env variable to be set to the FQDN
