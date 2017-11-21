@@ -1,5 +1,5 @@
 # Consul Telemetry Exporter
-[![Build Status](https://api.travis-ci.org/SWCE/consul_telemetry_exporter.js.svg?branch=master)](http://travis-ci.org/SWCE/consul_telemetry_exporter.js)
+[![Build Status](https://api.travis-ci.org/SWCE/consul_telemetry_exporter.js.svg?branch=master)](http://travis-ci.org/SWCE/consul_telemetry_exporter)
 [![NPM Version](http://img.shields.io/npm/v/consul_telemetry_exporter.svg?style=flat)](https://www.npmjs.org/package/consul_telemetry_exporter)
 [![NPM Downloads](https://img.shields.io/npm/dm/consul_telemetry_exporter.svg?style=flat)](https://www.npmjs.org/package/consul_telemetry_exporter)
 
