@@ -1,6 +1,6 @@
 {
   "name": "consul-telemetry-exporter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "bin": "bin/www",
   "dependencies": {
