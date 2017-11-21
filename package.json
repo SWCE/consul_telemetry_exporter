@@ -1,0 +1,22 @@
+{
+  "name": "consul-telemetry-exporter",
+  "version": "0.0.1",
+  "private": false,
+  "bin": "app.js",
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0",
+    "serve-favicon": "~2.4.5",
+    "prom-client": "~10.2.2",
+    "request-promise": "~4.2.2",
+    "request": "~2.83.0",
+    "underscore": "~1.8.3"
+  },
+  "scripts": {
+    "start": "node ./bin/www"
+  }
+}
