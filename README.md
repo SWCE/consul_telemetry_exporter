@@ -9,10 +9,10 @@ Any reported metric on the [metrica endpoint](https://www.consul.io/api/agent.ht
 
 ## Installation
 
-    $ npm install -g consul_telemetry_exporter
+    $ npm install -g consul-telemetry-exporter
 
 ## running
 
-    $ consul_telemetry_exporter
-
+    $ consul-telemetry-exporter
+    
 will run on port 7569 by default, can be override using the PORT env variable
