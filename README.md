@@ -1,1 +1,1 @@
-# consul_telemetry_exporter
+# Consul Telemetry Exporter
