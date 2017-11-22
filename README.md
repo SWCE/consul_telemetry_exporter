@@ -5,7 +5,7 @@
 
 Prometheus exporter for [consul telemetry metrics](https://www.consul.io/docs/agent/telemetry.html).
 
-Any reported metric on the [metrica endpoint](https://www.consul.io/api/agent.html#view-metrics) will be exposed.
+Any reported metric on the [metrics endpoint](https://www.consul.io/api/agent.html#view-metrics) will be exposed.
 
 ## Installation
 
