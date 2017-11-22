@@ -1,8 +1,4 @@
 # Consul Telemetry Exporter
-[![Docker Stars](https://img.shields.io/docker/stars/swce/consul_telemetry_exporter.svg?style=plastic)](https://registry.hub.docker.com/v2/repositories/swce/consul_telemetry_exporter/stars/count/)
-[![Docker pulls](https://img.shields.io/docker/pulls/swce/consul_telemetry_exporter.svg?style=plastic)](https://registry.hub.docker.com/v2/repositories/swce/consul_telemetry_exporter)
-[![Docker build status](https://img.shields.io/docker/build/swce/consul_telemetry_exporter.svg)](https://github.com/swce/consul_telemetry_exporter)
-[![Docker Automated build](https://img.shields.io/docker/automated/swce/consul_telemetry_exporter.svg)](https://github.com/swce/consul_telemetry_exporter)
 [![Build Status](https://api.travis-ci.org/SWCE/consul_telemetry_exporter.svg?branch=master)](http://travis-ci.org/SWCE/consul_telemetry_exporter)
 [![Coverage Status](https://coveralls.io/repos/github/SWCE/consul_telemetry_exporter/badge.svg)](https://coveralls.io/github/SWCE/consul_telemetry_exporter)
 [![bitHound Overall Score](https://www.bithound.io/github/SWCE/consul_telemetry_exporter/badges/score.svg)](https://www.bithound.io/github/SWCE/consul_telemetry_exporter)
@@ -12,6 +8,7 @@
 [![HitCount](http://hits.dwyl.io/SWCE/consul_telemetry_exporter.svg)](http://hits.dwyl.io/SWCE/consul_telemetry_exporter)
 
 [![https://nodei.co/npm/consul_telemetry_exporter.png?downloads=true&downloadRank=true&stars=true](https://nodei.co/npm/consul-telemetry-exporter.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/consul-telemetry-exporter)
+[![dockeri.co](http://dockeri.co/image/swce/consul_telemetry_exporter)](https://registry.hub.docker.com/swce/consul_telemetry_exporter/)
 
 Prometheus exporter for [consul telemetry metrics](https://www.consul.io/docs/agent/telemetry.html).
 
