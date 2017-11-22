@@ -10,9 +10,9 @@ const hostname = process.env.CONSUL_HOST || process.env.HOSTNAME || os.hostname(
 const port = process.env.CONSUL_PORT || 8500;
 
 /* GET metrics listing. */
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res) {
   collect().then(function (metrics) {
-    res.render('metrics', { metrics: metrics });
+    res.send(metrics);
   }).catch(function (err) {
     res.status(500).send(err);
   });
