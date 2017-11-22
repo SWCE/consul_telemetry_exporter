@@ -9,7 +9,7 @@ const prometheus = require('./../lib/prometheus');
 const router = express.Router();
 
 const registry = client.register;
-const hostname = process.env.CONSUL_HOST || process.env.HOSTNAME || os.hostname();
+const hostname = 'icsl4505.iil.intel.com' || process.env.CONSUL_HOST || process.env.HOSTNAME || os.hostname();
 const port = process.env.CONSUL_PORT || 8500;
 
 /* GET metrics listing. */
@@ -59,14 +59,16 @@ function createPrometheusMetrics(result) {
   }
 
   function _setGauge(name, labels, value) {
-    let metricName = prometheus.sanitize(name);
+    const metric = prometheus.normalize(name);
+    const normalizedLabels = _.extend({}, metric.labels, labels);
+    const metricName = prometheus.sanitize(metric.name);
     const gaugeMetric = metrics[metricName] || new client.Gauge({
       name: metricName.toLowerCase(),
       help: metricName.toLowerCase() + '_help',
-      labelNames: Object.keys(labels),
+      labelNames: Object.keys(normalizedLabels),
       registers: [registry]
     });
-    gaugeMetric.set(labels, value);
+    gaugeMetric.set(normalizedLabels, value);
     metrics[metricName] = gaugeMetric;
   }
 }
