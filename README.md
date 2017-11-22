@@ -9,7 +9,7 @@
 
 [![NPM](https://nodei.co/npm/consul-telemetry-exporter.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/consul-telemetry-exporter/)
 
-[![dockeri.co](http://dockeri.co/image/swce/consul_telemetry_exporter)](https://registry.hub.docker.com/swce/consul_telemetry_exporter/)
+[![dockeri.co](http://dockeri.co/image/swce/consul_telemetry_exporter)](https://hub.docker.com/r/swce/consul_telemetry_exporter/)
 
 Prometheus exporter for [consul telemetry metrics](https://www.consul.io/docs/agent/telemetry.html).
 
