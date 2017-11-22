@@ -31,7 +31,7 @@ describe('prometheus test', function () {
   });
 
   it('should return consul.raft.replication.appendEntries.logs with node tag', function () {
-    expect(prometheus.normalize('consul.consul.raft.replication.appendEntries.logs.58deeea6-0cc7-fc76-720f-b187be80f900')).to.be.eql({
+    expect(prometheus.normalize('consul.raft.replication.appendEntries.logs.58deeea6-0cc7-fc76-720f-b187be80f900')).to.be.eql({
       name: 'consul.raft.replication.appendEntries.logs',
       labels: {
         node: '58deeea6_0cc7_fc76_720f_b187be80f900'
@@ -165,6 +165,13 @@ describe('prometheus test', function () {
       labels: {
         service: 'a'
       }
+    });
+  });
+
+  it('should return single consul prefix', function () {
+    expect(prometheus.normalize('consul.consul.health.service')).to.be.eql({
+      name: 'consul.health.service',
+      labels: {}
     });
   });
 
