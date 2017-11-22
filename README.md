@@ -1,4 +1,8 @@
 # Consul Telemetry Exporter
+[![Docker Stars](https://img.shields.io/docker/stars/swce/consul_telemetry_exporter.svg?style=plastic)](https://registry.hub.docker.com/v2/repositories/swce/consul_telemetry_exporter/stars/count/)
+[![Docker pulls](https://img.shields.io/docker/pulls/swce/consul_telemetry_exporter.svg?style=plastic)](https://registry.hub.docker.com/v2/repositories/swce/consul_telemetry_exporter)
+[![Docker build status](https://img.shields.io/docker/build/swce/consul_telemetry_exporter.svg)](https://github.com/swce/consul_telemetry_exporter)
+[![Docker Automated build](https://img.shields.io/docker/automated/swce/consul_telemetry_exporter.svg)](https://github.com/swce/consul_telemetry_exporter)
 [![Build Status](https://api.travis-ci.org/SWCE/consul_telemetry_exporter.svg?branch=master)](http://travis-ci.org/SWCE/consul_telemetry_exporter)
 [![Coverage Status](https://coveralls.io/repos/github/SWCE/consul_telemetry_exporter/badge.svg)](https://coveralls.io/github/SWCE/consul_telemetry_exporter)
 [![bitHound Overall Score](https://www.bithound.io/github/SWCE/consul_telemetry_exporter/badges/score.svg)](https://www.bithound.io/github/SWCE/consul_telemetry_exporter)
