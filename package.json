@@ -3,6 +3,9 @@
   "version": "0.0.3",
   "private": false,
   "bin": "bin/www",
+  "scripts": {
+    "test": "make test"
+  },
   "dependencies": {
     "body-parser": "~1.18.2",
     "cookie-parser": "~1.4.3",
