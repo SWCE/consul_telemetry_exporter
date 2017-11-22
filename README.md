@@ -7,7 +7,7 @@
 [![devDependencies Status](https://david-dm.org/SWCE/consul_telemetry_exporter/dev-status.svg)](https://david-dm.org/SWCE/consul_telemetry_exporter?type=dev)
 [![HitCount](http://hits.dwyl.io/SWCE/consul_telemetry_exporter.svg)](http://hits.dwyl.io/SWCE/consul_telemetry_exporter)
 
-[![https://nodei.co/npm/consul_telemetry_exporter.png?downloads=true&downloadRank=true&stars=true](https://nodei.co/npm/consul-telemetry-exporter.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/consul-telemetry-exporter)
+[![NPM](https://nodei.co/npm/consul-telemetry-exporter.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/consul-telemetry-exporter/)
 [![dockeri.co](http://dockeri.co/image/swce/consul_telemetry_exporter)](https://registry.hub.docker.com/swce/consul_telemetry_exporter/)
 
 Prometheus exporter for [consul telemetry metrics](https://www.consul.io/docs/agent/telemetry.html).
