@@ -2,7 +2,7 @@
 
 const expect = require('expect.js');
 
-describe('busywait.js', function () {
+describe('consul_telemetry_exporter', function () {
 
   it('Should test nothing', function() {
     expect(true).to.be(true);
