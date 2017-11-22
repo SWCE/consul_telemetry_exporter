@@ -9,7 +9,7 @@ const prometheus = require('./../lib/prometheus');
 const router = express.Router();
 
 const registry = client.register;
-const hostname = 'icsl4505.iil.intel.com' || process.env.CONSUL_HOST || process.env.HOSTNAME || os.hostname();
+const hostname = process.env.CONSUL_HOST || process.env.HOSTNAME || os.hostname();
 const port = process.env.CONSUL_PORT || 8500;
 
 /* GET metrics listing. */
