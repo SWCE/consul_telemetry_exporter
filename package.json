@@ -10,11 +10,12 @@
     "express": "~4.15.5",
     "jade": "~1.11.0",
     "morgan": "~1.9.0",
-    "serve-favicon": "~2.4.5",
     "prom-client": "~10.2.2",
-    "request-promise": "~4.2.2",
     "request": "~2.83.0",
-    "underscore": "~1.8.3"
+    "request-promise": "~4.2.2",
+    "serve-favicon": "~2.4.5",
+    "underscore": "~1.8.3",
+    "winston": "^2.4.0"
   },
   "scripts": {
     "start": "node ./bin/www"
