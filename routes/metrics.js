@@ -46,12 +46,12 @@ function createPrometheusMetrics(result) {
   return res;
 
   function _handleCounter(counter) {
-    _setGauge(counter.Name + '_count', _.extend({'statistic': 'count'}, counter.Labels), counter.Count);
-    _setGauge(counter.Name + '_sum', _.extend({'statistic': 'sum'}, counter.Labels), counter.Sum);
-    _setGauge(counter.Name + '_min', _.extend({'statistic': 'min'}, counter.Labels), counter.Min);
-    _setGauge(counter.Name + '_max', _.extend({'statistic': 'max'}, counter.Labels), counter.Max);
-    _setGauge(counter.Name + '_mean', _.extend({'statistic': 'mean'}, counter.Labels), counter.Mean);
-    _setGauge(counter.Name + '_stddev', _.extend({'statistic': 'stddev'}, counter.Labels), counter.Stddev);
+    _setGauge(counter.Name, _.extend({'statistic': 'count'}, counter.Labels), counter.Count);
+    _setGauge(counter.Name, _.extend({'statistic': 'sum'}, counter.Labels), counter.Sum);
+    _setGauge(counter.Name, _.extend({'statistic': 'min'}, counter.Labels), counter.Min);
+    _setGauge(counter.Name, _.extend({'statistic': 'max'}, counter.Labels), counter.Max);
+    _setGauge(counter.Name, _.extend({'statistic': 'mean'}, counter.Labels), counter.Mean);
+    _setGauge(counter.Name, _.extend({'statistic': 'stddev'}, counter.Labels), counter.Stddev);
   }
 
   function _handleGauge(gauge) {
