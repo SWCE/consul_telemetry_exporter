@@ -17,4 +17,5 @@ install:
 
 script:
   - docker ps | grep -q consul_telemetry_exporter
+  - npm install
   - npm test
