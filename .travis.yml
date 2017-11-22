@@ -13,7 +13,7 @@ cache:
 
 install:
   - docker build -t consul_telemetry_exporter .
-  - docker run -d -p 127.0.0.1:9310:9310 --name consul_telemetry_exporter consul_telemetry_exporter
+  - docker run -d -p 127.0.0.1:9320:9320 --name consul_telemetry_exporter consul_telemetry_exporter
 
 script:
   - docker ps | grep -q consul_telemetry_exporter
