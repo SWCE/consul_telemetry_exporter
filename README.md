@@ -1,7 +1,13 @@
 # Consul Telemetry Exporter
 [![Build Status](https://api.travis-ci.org/SWCE/consul_telemetry_exporter.svg?branch=master)](http://travis-ci.org/SWCE/consul_telemetry_exporter)
-[![NPM Version](http://img.shields.io/npm/v/consul-telemetry-exporter.svg?style=flat)](https://www.npmjs.org/package/consul-telemetry-exporter)
-[![NPM Downloads](https://img.shields.io/npm/dm/consul-telemetry-exporter.svg?style=flat)](https://www.npmjs.org/package/consul-telemetry-exporter)
+[![Coverage Status](https://coveralls.io/repos/github/SWCE/consul_telemetry_exporter/badge.svg)](https://coveralls.io/github/SWCE/consul_telemetry_exporter)
+[![bitHound Overall Score](https://www.bithound.io/github/SWCE/consul_telemetry_exporter/badges/score.svg)](https://www.bithound.io/github/SWCE/consul_telemetry_exporter)
+[![Known Vulnerabilities](https://snyk.io/test/github/SWCE/consul_telemetry_exporter/badge.svg)](https://snyk.io/test/github/SWCE/consul_telemetry_exporter)
+[![dependencies Status](https://david-dm.org/SWCE/consul_telemetry_exporter/status.svg)](https://david-dm.org/SWCE/consul_telemetry_exporter)
+[![devDependencies Status](https://david-dm.org/SWCE/consul_telemetry_exporter/dev-status.svg)](https://david-dm.org/SWCE/consul_telemetry_exporter?type=dev)
+[![HitCount](http://hits.dwyl.io/SWCE/consul_telemetry_exporter.svg)](http://hits.dwyl.io/SWCE/consul_telemetry_exporter)
+
+[![https://nodei.co/npm/consul_telemetry_exporter.png?downloads=true&downloadRank=true&stars=true](https://nodei.co/npm/consul-telemetry-exporter.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/consul-telemetry-exporter)
 
 Prometheus exporter for [consul telemetry metrics](https://www.consul.io/docs/agent/telemetry.html).
 
