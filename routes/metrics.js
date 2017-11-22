@@ -4,6 +4,7 @@ const rp = require('request-promise');
 const _ = require('underscore');
 const os = require('os');
 const logger = require('./../lib/logger');
+const prometheus = require('./../lib/prometheus');
 
 const router = express.Router();
 
@@ -58,7 +59,7 @@ function createPrometheusMetrics(result) {
   }
 
   function _setGauge(name, labels, value) {
-    let metricName = _sanitize(name);
+    let metricName = prometheus.sanitize(name);
     const gaugeMetric = metrics[metricName] || new client.Gauge({
       name: metricName.toLowerCase(),
       help: metricName.toLowerCase() + '_help',
@@ -67,9 +68,5 @@ function createPrometheusMetrics(result) {
     });
     gaugeMetric.set(labels, value);
     metrics[metricName] = gaugeMetric;
-  }
-
-  function _sanitize(name) {
-    return name.replace(/[^a-zA-Z0-9:_]/g, '_');
   }
 }
