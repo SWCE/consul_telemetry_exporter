@@ -6,11 +6,14 @@ const _ = require('underscore');
 const router = express.Router();
 
 const hostname = process.env.HOSTNAME;
+const port = process.env.CONSUL_PORT || 8500;
 
 /* GET metrics listing. */
 router.get('/', function(req, res, next) {
   collect().then(function (metrics) {
     res.render('metrics', { metrics: metrics });
+  }).catch(function (err) {
+    res.status(500).send(err);
   });
 });
 
@@ -18,7 +21,7 @@ module.exports = router;
 
 function collect() {
   const options = {
-    uri: 'http://' + hostname + ':8500/v1/agent/metrics',
+    uri: 'http://' + hostname + ':' + port + '/v1/agent/metrics',
     json: true
   };
 
@@ -48,8 +51,7 @@ function createPrometheusMetrics(result) {
 
   function _setGauge(name, labels, value) {
     labels.host = hostname;
-    let metricName = name.split('.').join('_');
-    metricName = metricName.split('-').join('_');
+    let metricName = _sanitize(name);
     const gaugeMetric = metrics[metricName] || new client.Gauge({
       name: metricName.toLowerCase(),
       help: metricName.toLowerCase() + '_help',
@@ -58,5 +60,9 @@ function createPrometheusMetrics(result) {
     });
     gaugeMetric.set(labels, value);
     metrics[metricName] = gaugeMetric;
+  }
+
+  function _sanitize(name) {
+    return name.replace(/[^a-zA-Z0-9:_]/g, '_');
   }
 }
