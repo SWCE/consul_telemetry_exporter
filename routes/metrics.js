@@ -2,10 +2,11 @@ const express = require('express');
 const client = require('prom-client');
 const rp = require('request-promise');
 const _ = require('underscore');
+const os = require('os');
 
 const router = express.Router();
 
-const hostname = process.env.HOSTNAME;
+const hostname = process.env.CONSUL_HOST || process.env.HOSTNAME || os.hostname();
 const port = process.env.CONSUL_PORT || 8500;
 
 /* GET metrics listing. */
