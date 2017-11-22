@@ -17,7 +17,8 @@ router.get('/', function (req, res) {
     res.type('text/plain; version=0.0.4; charset=utf-8').send(metrics);
   }).catch(function (err) {
     logger.error('Error in metrics collection ' + err);
-    res.status(500).send(err);
+    const statusCode = (err || {}).statusCode || 500;
+    res.status(statusCode).send(err);
   });
 });
 
