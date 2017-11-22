@@ -3,6 +3,7 @@ const client = require('prom-client');
 const rp = require('request-promise');
 const _ = require('underscore');
 const os = require('os');
+const logger = require('./../lib/logger');
 
 const router = express.Router();
 
@@ -10,10 +11,11 @@ const hostname = process.env.CONSUL_HOST || process.env.HOSTNAME || os.hostname(
 const port = process.env.CONSUL_PORT || 8500;
 
 /* GET metrics listing. */
-router.get('/', function(req, res) {
+router.get('/', function (req, res) {
   collect().then(function (metrics) {
     res.send(metrics);
   }).catch(function (err) {
+    logger.error('Error in metrics collection ' + err);
     res.status(500).send(err);
   });
 });
@@ -21,11 +23,12 @@ router.get('/', function(req, res) {
 module.exports = router;
 
 function collect() {
+  let uri = 'http://' + hostname + ':' + port + '/v1/agent/metrics';
   const options = {
-    uri: 'http://' + hostname + ':' + port + '/v1/agent/metrics',
+    uri: uri,
     json: true
   };
-
+  logger.debug('Making request to consul @ ' + uri);
   return rp(options).then(createPrometheusMetrics);
 }
 
@@ -35,6 +38,7 @@ function createPrometheusMetrics(result) {
   result.Gauges.forEach(_handleGauge);
   result.Counters.forEach(_handleCounter);
   result.Samples.forEach(_handleCounter);
+  logger.debug('Finished building metrics object');
   return registry.metrics();
 
   function _handleCounter(counter) {
