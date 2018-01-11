@@ -28,3 +28,5 @@ Will run on port 9320 by default, can be override using the `PORT` env variable
 Will use consul host from `CONSUL_HOST` or `HOSTNAME` env variables or the localhost in that order
 
 Will use port 8500 port by default, can be override using the `CONSUL_PORT` env variable
+
+Will use http scheme by default, can be override using the `CONSUL_SCHEME` env variable
