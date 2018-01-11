@@ -9,6 +9,7 @@ const prometheus = require('./../lib/prometheus');
 const router = express.Router();
 
 const registry = client.register;
+const scheme = process.env.CONSUL_SCHEME || 'http';
 const hostname = process.env.CONSUL_HOST || process.env.HOSTNAME || os.hostname();
 const port = process.env.CONSUL_PORT || 8500;
 
@@ -26,7 +27,7 @@ router.get('/', function (req, res) {
 module.exports = router;
 
 function collect() {
-  let uri = 'http://' + hostname + ':' + port + '/v1/agent/metrics';
+  let uri = scheme + '://' + hostname + ':' + port + '/v1/agent/metrics';
   const options = {
     uri: uri,
     json: true
