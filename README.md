@@ -1,3 +1,6 @@
+# Warning: this project as been deprecated
+This project has been deprecated in favor of https://www.consul.io/api/agent.html#view-metrics
+
 # Consul Telemetry Exporter
 [![Build Status](https://api.travis-ci.org/SWCE/consul_telemetry_exporter.svg?branch=master)](http://travis-ci.org/SWCE/consul_telemetry_exporter)
 [![Coverage Status](https://coveralls.io/repos/github/SWCE/consul_telemetry_exporter/badge.svg)](https://coveralls.io/github/SWCE/consul_telemetry_exporter)
