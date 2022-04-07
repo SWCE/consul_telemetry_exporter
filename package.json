@@ -14,7 +14,7 @@
     "request-promise": "~4.2.2",
     "serve-favicon": "~2.5.0",
     "underscore": "~1.9.0",
-    "winston": "~2.4.2"
+    "winston": "~3.3.0"
   },
   "devDependencies": {
     "coveralls": "~3.0.0",
